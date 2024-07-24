@@ -19,6 +19,6 @@
 
 ## 软件截图
 
-<img src="./screenshots/1.PNG" width="50%" />
+<img src="./html/screenshots/1.PNG" width="50%" />
 
 <!-- ![1](./screenshots/1.PNG) -->
