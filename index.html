@@ -24,16 +24,35 @@
     <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" href="/assets/css/style.css?v=51ae1eb2839a9344d6b165f5d786d6cbcd4f43c7">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
-    <!-- Setup Google Analytics -->
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            padding: 1em;
+        }
 
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
 
+        .icp-link {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+            font-size: 12px;
+            line-height: 26px;
+            color: #999;
+            white-space: nowrap;
+            border: none;
+            text-decoration: none;
+        }
 
-    <!-- You can set your favicon here -->
-    <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-    <!-- end custom head snippets -->
+        .icp-link:hover {
+            color: #00a4ff
+        }
+    </style>
 
 </head>
 
@@ -66,11 +85,11 @@
 
         <h2 id="软件截图">软件截图</h2>
 
-        <p><img src="./html/screenshots/1.PNG" width="50%" /></p>
+        <p><img src="./static/screenshots/1.PNG" width="50%" /></p>
 
-        <!-- ![1](/screenshots/1.PNG) -->
-        <a href="https://beian.miit.gov.cn/" target="_blank">您的备案号</a>
-        <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2024065955号-1A</a>
+        <footer>
+            <a href="https://beian.miit.gov.cn/" target="_blank" class="icp-link">鄂ICP备2024065955号-1A</a>
+        </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
         integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
