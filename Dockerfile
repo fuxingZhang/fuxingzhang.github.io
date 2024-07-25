@@ -3,6 +3,7 @@ FROM alpine:latest
 WORKDIR /app
 COPY ./dist/server  .
 COPY html ./html
+COPY static ./static
 
 # RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
 #     && apk update
