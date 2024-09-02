@@ -25,7 +25,7 @@ clean:
 # 清理Docker镜像
 docker-clean:
 	@echo "Cleaning Docker images..."
-	@docker rmi public:latest
+	@docker rmi -f public:latest
 
 # 定义一个目标来执行所有操作
 all: build docker-build docker-run
