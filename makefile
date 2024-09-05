@@ -30,6 +30,12 @@ docker-clean:
 # 定义一个目标来执行所有操作
 all: build docker-build docker-run
 
+dp:
+	@CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o dist/headless headless/main.go
+	@docker build -f Dockerfile.headless -t headless:latest .
+	@docker rm -f headless
+	@docker run -d --restart=always -p 8090:8090/tcp --name headless --init headless:latest
+
 # 设置默认目标
 .PHONY: build docker-build docker-run docker-clean clean all
 .DEFAULT_GOAL := build

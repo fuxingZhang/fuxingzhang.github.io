@@ -1,10 +1,4 @@
-# FROM alpine:latest
-FROM chromedp/headless-shell:latest
-
-WORKDIR /app
-COPY ./dist/server  .
-COPY html ./html
-COPY static ./static
+FROM alpine:latest
 
 # RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
 #     && apk update
@@ -12,6 +6,11 @@ COPY static ./static
 # RUN apk add tzdata \
 #     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 #     && echo "Asia/Shanghai" > /etc/timezone
+
+WORKDIR /app
+COPY ./dist/server  .
+COPY html ./html
+COPY static ./static
 
 EXPOSE 80
 
