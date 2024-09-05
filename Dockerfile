@@ -1,4 +1,5 @@
-FROM alpine:latest
+# FROM alpine:latest
+FROM chromedp/headless-shell:latest
 
 WORKDIR /app
 COPY ./dist/server  .

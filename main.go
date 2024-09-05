@@ -1,6 +1,8 @@
 package main
 
 import (
+	"app/pkg"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -42,8 +44,27 @@ func main() {
 	//router.StaticFS("/", http.Dir(filepath.Join(dir, "./html")))
 
 	// 注册默认路由
-	r.GET("/hello", func(c *gin.Context) {
-		c.String(http.StatusOK, "Hello, TLS user! Your config: %s", c.Request.TLS)
+	r.GET("/cookie", func(c *gin.Context) {
+		var domain = c.Query("domain")
+		var key = c.Query("key")
+
+		if domain == "" {
+			c.AbortWithStatus(400)
+			return
+		}
+
+		result, err := pkg.GetCookie(domain)
+		if err != nil {
+			c.AbortWithError(500, err)
+			return
+		}
+
+		if key != "" {
+			c.String(http.StatusOK, result[key])
+			return
+		}
+		fmt.Println(result)
+		c.JSON(http.StatusOK, result)
 	})
 
 	r.GET("/", func(c *gin.Context) {
