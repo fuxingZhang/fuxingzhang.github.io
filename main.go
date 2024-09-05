@@ -2,7 +2,6 @@ package main
 
 import (
 	"app/pkg"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -63,7 +62,7 @@ func main() {
 			c.String(http.StatusOK, result[key])
 			return
 		}
-		fmt.Println(result)
+
 		c.JSON(http.StatusOK, result)
 	})
 
