@@ -42,5 +42,5 @@ func main() {
 		r.Run(":80")
 	}()
 
-	log.Fatal(autotls.Run(r, "stockapp.sandhope.com", "zhangfuxing.icu"))
+	log.Fatal(autotls.Run(r, "hainan888.top", "stockapp.sandhope.com"))
 }
