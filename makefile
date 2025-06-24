@@ -15,7 +15,7 @@ docker-build:
 docker-run:
 	@echo "Running Docker container..."
 	@docker rm -f public
-	@docker run -d --restart=always --net=host --name public public
+	@docker run -d --restart=always --net=host -v /root/cert:/app/cert --name public public
 
 # 清理编译生成的二进制文件
 clean:
