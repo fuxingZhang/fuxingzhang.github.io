@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应用中心</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <style>
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .app-card {
+            background-color: #f2f2f7;
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .app-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .app-card p {
+            color: #8e8e93;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .app-card .lang-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: #007aff;
+            color: #fff;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-right: 8px;
+        }
+
+        .app-card .category-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: #e0e0e0;
+            color: #333;
+            border-radius: 12px;
+            font-size: 0.85rem;
+        }
+
+        .section-divider {
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>应用中心</h1>
+            <p>欢迎访问我的应用门户 - 探索各类实用工具</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-divider">🇨🇳 中文应用</h2>
+            <div class="app-grid">
+                <div class="app-card">
+                    <h3>股市趣味百科</h3>
+                    <p>学习股票知识的趣味平台，让投资更有趣。</p>
+                    <span class="lang-badge">中文</span>
+                    <span class="category-badge">教育</span>
+                    <div style="margin-top: 10px;">
+                        <a href="/zh/stock_pedia/support.html" class="email-link">技术支持</a> | 
+                        <a href="/zh/stock_pedia/policy.html" class="email-link">隐私政策</a>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <h3>差价炒股</h3>
+                    <p>利用两只股票的股价波动，来回倒仓获利的辅助工具。</p>
+                    <span class="lang-badge">中文</span>
+                    <span class="category-badge">金融</span>
+                    <div style="margin-top: 10px;">
+                        <a href="/zh/stock/support.html" class="email-link">技术支持</a> | 
+                        <a href="/zh/stock/policy.html" class="email-link">隐私政策</a>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <h3>极简记忆</h3>
+                    <p>个性化语言学习工具，通过动画卡片高效记忆单词和短语。</p>
+                    <span class="lang-badge">中文</span>
+                    <span class="category-badge">教育</span>
+                    <div style="margin-top: 10px;">
+                        <a href="/zh/memory/support.html" class="email-link">技术支持</a> | 
+                        <a href="/zh/memory/policy.html" class="email-link">隐私政策</a>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <h3>附近卫生间</h3>
+                    <p>快速查找并导航到附近的公共卫生间。</p>
+                    <span class="lang-badge">中文</span>
+                    <span class="category-badge">生活</span>
+                    <div style="margin-top: 10px;">
+                        <a href="/zh/wc/support.html" class="email-link">技术支持</a> | 
+                        <a href="/zh/wc/policy.html" class="email-link">隐私政策</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-divider">🇺🇸 English Apps</h2>
+            <div class="app-grid">
+                <div class="app-card">
+                    <h3>Simple Word Memory</h3>
+                    <p>A simple and efficient tool for personalized language learning with animated cards.</p>
+                    <span class="lang-badge">English</span>
+                    <span class="category-badge">Education</span>
+                    <div style="margin-top: 10px;">
+                        <a href="/en/memory/support.html" class="email-link">Technical Support</a> | 
+                        <a href="/en/memory/policy.html" class="email-link">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <div class="app-card">
+                    <h3>Restroom Navigator</h3>
+                    <p>Quickly find and navigate to nearby public restrooms.</p>
+                    <span class="lang-badge">English</span>
+                    <span class="category-badge">Lifestyle</span>
+                    <div style="margin-top: 10px;">
+                        <a href="/en/wc/support.html" class="email-link">Technical Support</a> | 
+                        <a href="/en/wc/policy.html" class="email-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>其他链接</h2>
+            <div class="policy-card">
+                <ul>
+                    <li><a href="/zh/terms.html" class="email-link">使用条款 (中文)</a></li>
+                    <li><a href="/en/terms.html" class="email-link">Terms of Use (English)</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 应用中心。保留所有权利。</p>
+            <p>Made with ❤️ by ZhangFuXing</p>
+        </div>
+    </div>
+</body>
+</html>

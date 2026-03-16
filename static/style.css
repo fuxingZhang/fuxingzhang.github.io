@@ -1,0 +1,136 @@
+/* 共享样式文件 for 股市趣味百科 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f2f2f7;
+    color: #000;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px; /* 增加最大宽度以适应大屏幕 */
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #8e8e93;
+    font-size: 1rem;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.section p, .section ul {
+    color: #8e8e93;
+    margin-bottom: 15px;
+}
+
+.section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.contact-card, .policy-card {
+    background-color: #f2f2f7;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-card h3, .policy-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.contact-card p {
+    margin-bottom: 5px;
+}
+
+.email-link {
+    color: #007aff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+.highlight {
+    color: #000;
+    font-weight: 500;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #8e8e93;
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        max-width: 100%; /* 小屏幕上全屏显示 */
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .section h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        padding: 40px; /* 大屏幕上增加内边距 */
+    }
+    
+    .header h1 {
+        font-size: 2.5rem; /* 大屏幕上增大标题 */
+    }
+}
